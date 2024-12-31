@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rayann's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Liens vers les polices et icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- À placer dans la section <head> de votre document HTML -->
+    <script src="script.js" defer></script>
+    <!-- Autres balises du head -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    
+        
+
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="name-and-language">
+                <h1><span class="red">Rayann</span> <span class="white">Sagnon</span></h1>
+                <button class="language-btn" onclick="switchLanguage()">EN</button>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link" data-en="Home" data-fr="Accueil" data-current-lang="en">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-en="About" data-fr="À propos" data-current-lang="en">About</a></li>
+                    <li><a href="#highlights" class="nav-link" data-en="Highlights" data-fr="Réalisations" data-current-lang="en">Highlights</a></li>
+                    <li><a href="#skills" class="nav-link" data-en="Skills" data-fr="Compétences" data-current-lang="en">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" data-en="Projects" data-fr="Projets" data-current-lang="en">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Home -->
+    <section id="home" class="appear">
+        <div class="intro hidden">
+            <!-- Image à gauche -->
+            <div class="profile-container">
+                <div class="profile-picture">
+                    <img src="images/moii.png" alt="Rayann's Picture">
+                </div>
+            </div>
+            <!-- Texte à droite -->
+            <div class="text-content">
+                <div class="title-container">
+                    <h2 data-en="Hi, I'm Rayann" data-fr="Salut, je suis Rayann" data-current-lang="en">
+                        Hi, I'm Rayann
+                    </h2>
+                    <div class="underline"></div>
+                </div>
+                <p data-en="I'm a terminale student with a keen interest in computer science and technology. I enjoy learning about new programming languages and exploring how technology shapes our world. My goal is to study computer science at university and eventually work in a field where I can innovate and contribute to technological advancements." data-fr="Je suis un étudiant en terminale avec un grand intérêt pour l'informatique et la technologie. J'aime apprendre de nouveaux langages de programmation et explorer comment la technologie façonne notre monde. Mon objectif est d'étudier l'informatique à l'université et de travailler dans un domaine où je peux innover et contribuer aux avancées technologiques." data-current-lang="en">
+                    I'm a terminale student with a keen interest in computer science and technology. I enjoy learning about new programming languages and exploring how technology shapes our world. My goal is to study computer science at university and eventually work in a field where I can innovate and contribute to technological advancements.
+                </p>
+            </div>
+        </div>
+        <!-- Bouton de défilement -->
+        <div class="scroll-indicator">
+            <span data-en="Scroll" data-fr="Défiler" data-current-lang="en">Scroll</span>
+            <div class="icon-circle">
+                <i class="material-icons">keyboard_arrow_down</i>
+            </div>
+        </div>
+        <!-- Icônes des réseaux sociaux -->
+        <div class="social-icons">
+            <a href="mailto:rayannsagnon60@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/+22661252529" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/rayann_sgn" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <!-- Section About -->
+    <section id="about" class="appear">
+        <!-- Première sous-section -->
+        <div class="about-content hidden">
+            <div class="about-picture">
+                <img src="images/myworld.jpeg" alt="Rayann's world Picture">
+            </div>
+            <div class="text-content">
+                <div class="title-container">
+                    <h3 class="section-subtitle" data-en="A peek into my world" data-fr="Un aperçu de mon monde" data-current-lang="en">
+                        A peek into my world
+                    </h3>
+                    <div class="underline"></div>
+                </div>
+                <p data-en="Growing up, I was always surrounded by technology, which sparked my curiosity and led me to spend countless hours exploring the features of my mother’s computer. This early exposure laid the foundation for my deep interest in computer science. My educational journey was particularly shaped by my interest in mathematics and physics. Although I initially had a general interest in these subjects, it was in grade 7 that my enthusiasm truly blossomed. The problem-solving nature and logical structure of these disciplines captivated me, and they now play a central role in my studies. Outside of my studies, I enjoy participating in extracurricular activities, including sports and community projects. I believe it's important to have a balanced education and I love giving back to my community through volunteering. Family plays a crucial role in my life, providing me with unwavering support and encouragement. Their belief in my potential has been a constant source of motivation." data-fr="En grandissant, j’ai toujours été entouré de technologie, ce qui a éveillé ma curiosité et m’a amené à passer d’innombrables heures à explorer les fonctionnalités de l’ordinateur de ma mère. Cette exposition précoce a jeté les bases de mon profond intérêt pour l’informatique. Mon parcours scolaire a été particulièrement façonné par mon intérêt pour les mathématiques et la physique. Bien que j’ai d’abord eu un intérêt général pour ces matières, c’est en classe de 5ème que mon enthousiasme s’est véritablement épanoui. La nature de résolution de problèmes et la structure logique de ces disciplines m’ont captivé, et elles jouent maintenant un rôle central dans mes études. En dehors de mes études, j’aime participer à des activités parascolaires, notamment des sports et des projets communautaires. Je crois qu’il est important d’avoir une éducation équilibrée et j’aime m'investir dans ma communauté en faisant du bénévolat. Ma famille joue un rôle crucial dans ma vie, en m’apportant un soutien et des encouragements indéfectibles. Leur foi en mon potentiel est pour moi une source constante de motivation." data-current-lang="en">
+                    Growing up, I was always surrounded by technology, which sparked my curiosity and led me to spend countless hours exploring the features of my mother’s computer. This early exposure laid the foundation for my deep interest in computer science. My educational journey was particularly shaped by my interest in mathematics and physics. Although I initially had a general interest in these subjects, it was in grade 7 that my enthusiasm truly blossomed. The problem-solving nature and logical structure of these disciplines captivated me, and they now play a central role in my studies. Outside of my studies, I enjoy participating in extracurricular activities, including sports and community projects. I believe it's important to have a balanced education and I love giving back to my community through volunteering. Family plays a crucial role in my life, providing me with unwavering support and encouragement. Their belief in my potential has been a constant source of motivation.
+                </p>
+            </div>
+        </div>
+        <!-- Deuxième sous-section (Sport) -->
+        <div class="sport-section hidden">
+            <div class="text-content">
+                <div class="title-container">
+                    <h3 class="section-subtitle" data-en="Beyond the Classroom: My Sports Passion" data-fr="Au-delà de la salle de classe : ma passion pour le sport" data-current-lang="en">
+                        Beyond the Classroom: My Sports Passion
+                    </h3>
+                    <div class="underline"></div>
+                </div>
+                <p data-en="Athletics have always been a part of my life, giving me some joy and identity. At school, I have been playing Ping Pong for the past four years and experiencing their challenge with every new game has really struck a chord in me. There have been many more things that Taekwondo made me proud of and it was something to distract all my energy in! I always been involve in soccer, getting that adrenaline from the game and establishing a connection with my teammates. The kind of happiness and fulfillment being involved in sport brings is hard to describe." data-fr="L’athlétisme a toujours fait partie de ma vie, me procurant de la joie et une identité. À l’école, je joue au ping-pong depuis quatre ans. Relever ce défi à chaque nouvelle partie m’a vraiment exalté. Le taekwondo m’a procuré de la fierté tout en me permettant de me distraire. J’ai toujours été impliqué dans le football, ce qui me permet de ressentir cette adrénaline et d’établir des liens avec mes coéquipiers. Le bonheur et l’épanouissement que procurent le fait de pratiquer un sport, sont difficiles à décrire." data-current-lang="en">
+                    Athletics have always been a part of my life, giving me some joy and identity. At school, I have been playing Ping Pong for the past four years and experiencing their challenge with every new game has really struck a chord in me. There have been many more things that Taekwondo made me proud of and it was something to distract all my energy in! I always been involve in soccer, getting that adrenaline from the game and establishing a connection with my teammates. The kind of happiness and fulfillment being involved in sport brings is hard to describe.
+                </p>
+            </div>
+            <div class="sport-picture">
+                <img src="images/sport.png" alt="Rayann's sport Pictures">
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Section Highlights -->
+
+    <section id="highlights" class="appear">
+        <div class="section-title">
+            <div class="title-container">
+                <h2 data-en="Key moments" data-fr="Moments clés" data-current-lang="en">Key moments</h2>
+                <div class="underline"></div>
+                <h3 data-en="Here are some awards, articles, certificates, and other achievements that I am proud of" data-fr="Voici quelques récompenses, articles, certificats et autres réalisations dont je suis fier" data-current-lang="en">
+                    Here are some awards, articles, certificates, and other achievements that I am proud of   
+                </h3>
+            </div>
+        </div>
+
+        <!-- Première ligne de moments -->
+        <div class="moments hidden">
+            <div class="moments-container">
+                <!-- Highlight Item 1 -->
+                <div class="highlight-item">
+                    <img src="images/club.png" alt="Club Picture">
+                    <p data-en="As a member of the Humanity Club, I participate in organizing various activities to raise funds for those in need. Our club focuses on creating impactful events within the school, such as bake sales, movie nights, and community outreach programs. These initiatives not only help provide support to those in need but also foster a spirit of compassion and teamwork among students." data-fr="En tant que membre du Club Humanitaire, je participe à l'organisation de diverses activités pour collecter des fonds pour les personnes dans le besoin. Notre club se concentre sur la création d'événements marquants au sein de l'école, tels que des ventes de pâtisseries, des soirées cinéma et des programmes de sensibilisation communautaire. Ces initiatives aident non seulement à apporter un soutien aux personnes dans le besoin, mais aussi favorisent un esprit d'entraide et de travail d'équipe parmi les étudiants." data-current-lang="en">
+                        As a member of the Humanity Club, I participate in organizing various activities to raise funds for those in need. Our club focuses on creating impactful events within the school, such as bake sales, movie nights, and community outreach programs. These initiatives not only help provide support to those in need but also foster a spirit of compassion and teamwork among students.
+                    </p>
+                </div>
+
+                <!-- Icône de flèche (normale) -->
+                <span class="material-symbols-outlined arrow-icon">
+                    switch_access_shortcut
+                </span>
+
+                <!-- Highlight Item 2 -->
+                <div class="highlight-item">
+                    <img src="images/diploma.png" alt="Diploma Picture">
+                    <p data-en="Here is me looking very proud at my DNB graduation. I helped every single one of my classmates achieve a 100% pass rate with honors, as their class representative. In my case, with highest honors. It pays homage to all the hard work we put in." data-fr="Me voici, très fier de ma remise de diplôme du DNB. J'ai contribué à ce que nous obtenions, mes camarades et moi, un taux de réussite de 100% avec mention, en tant que délégué de ma classe. J'ai eu la plus haute distinction. Cela récompense notre travail acharné tout au long de l'année." data-current-lang="en">
+                        Here is me looking very proud at my DNB graduation. I helped every single one of my classmates achieve a 100% pass rate with honors, as their class representative. In my case, with highest honors. It pays homage to all the hard work we put in.
+                    </p>
+                     <!-- Bouton de téléchargement -->
+                    <a href="fichiers/Diplome_du_Brevet.pdf" download="Certificat.pdf" class="download-button">Download the certificate (pdf)</a>
+                </div>
+
+                <!-- Icône de flèche (inversée horizontalement) -->
+                <span class="material-symbols-outlined arrow-icon inverted">
+                    switch_access_shortcut
+                </span>
+
+                <!-- Highlight Item 3 -->
+                <div class="highlight-item">
+                    <img src="images/tradition.png" alt="Tradition Badge">
+                    <p data-en="This badge is worn by the organizing team of our school's cultural day. I had to oversee that all sorts of activities were moving smoothly as a supervisor. Processing all this taught me good coordination and teamwork skills." data-fr="Ce badge est porté par l'équipe organisatrice de la journée culturelle de notre école. En tant que superviseur, j'ai dû veiller au bon déroulement de toutes sortes d'activités. Cette gestion m'a appris à être polyvalent et à travailler en équipe." data-current-lang="en">
+                        This badge is worn by the organizing team of our school's cultural day. I had to oversee that all sorts of activities were moving smoothly as a supervisor. Processing all this taught me good coordination and teamwork skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       
+
+        
+
+       
+        <div class="moments hidden">
+            <div class="moments-container">
+                
+                <div class="highlight-item">
+                    <img src="images/sauve2.png" alt="First Aid Training">
+                    <p data-en="As a student, I undertook a course in first aid and acquired extensive skills on how to respond to emergencies. This training has equipped me with the knowledge to act promptly and efficiently in critical situations, ensuring the safety and well-being of those around me. It has also heightened my sense of responsibility and preparedness in everyday life." data-fr="En tant qu'étudiant, j'ai suivi une formation aux premiers secours et acquis des compétences approfondies sur la manière de réagir en cas d'urgence. Cette formation m'a permis d'acquérir les connaissances nécessaires pour agir rapidement et efficacement dans des situations critiques, assurant la sécurité et le bien-être de ceux qui m'entourent. Elle a également renforcé mon sens des responsabilités et ma préparation dans la vie quotidienne." data-current-lang="en">
+                        As a student, I undertook a course in first aid and acquired extensive skills on how to respond to emergencies. This training has equipped me with the knowledge to act promptly and efficiently in critical situations, ensuring the safety and well-being of those around me. It has also heightened my sense of responsibility and preparedness in everyday life.
+                    </p>
+                    <a href="fichiers/Premiers Secours.pdf" download="First_Aid_Certificate.pdf" class="download-button">Download the First Aid Certificate (pdf)</a>
+                </div>
+
+             
+                <span class="material-symbols-outlined arrow-icon vertical">
+                    switch_access_shortcut
+                </span>
+
+               
+                <div class="highlight-item">
+                    <img src="images/reunion2.png" alt="Public Speaking Event">
+                    <p data-en="Here is me at our school's public speaking event, attended by students and their parents. I hosted the entire event, managing the flow of the program and introducing speakers. This experience significantly enhanced my public speaking abilities and taught me how to engage an audience effectively. It was a rewarding opportunity to represent my school and contribute to a memorable event." data-fr="Me voici lors de l'événement d'expression orale de notre école, auquel ont assisté des élèves et leurs parents. J'ai animé l'intégralité de l'événement, gérant le déroulement du programme et présentant les intervenants. Cette expérience a considérablement amélioré mes compétences en prise de parole en public et m'a appris à capter efficacement l'attention d'un auditoire. Ce fut une occasion enrichissante de représenter mon école et de contribuer à un événement mémorable." data-current-lang="en">
+                        Here is me at our school's public speaking event, attended by students and their parents. I hosted the entire event, managing the flow of the program and introducing speakers. This experience significantly enhanced my public speaking abilities and taught me how to engage an audience effectively. It was a rewarding opportunity to represent my school and contribute to a memorable event.
+                    </p>
+                </div>
+
+               
+                <span class="material-symbols-outlined arrow-icon">
+                    switch_access_shortcut
+                </span>
+
+               
+                <div class="highlight-item">
+                    <img src="images/report2.png" alt="Internship Report">
+                    <p data-en="This screenshot is from a programming course I took during my internship at a tech company in my country. The internship allowed me to gain hands-on experience in software development and understand the workings of the tech industry. I worked on real projects alongside experienced professionals, which greatly enhanced my programming skills and introduced me to new technologies." data-fr="Cette capture d'écran provient d'un cours de programmation que j'ai suivi lors de mon stage dans une entreprise technologique de mon pays. Ce stage m'a permis d'acquérir une expérience pratique en développement logiciel et de comprendre le fonctionnement de l'industrie technologique. J'ai travaillé sur de vrais projets aux côtés de professionnels expérimentés, ce qui a grandement amélioré mes compétences en programmation et m'a fait découvrir de nouvelles technologies." data-current-lang="en">
+                        This screenshot is from a programming course I took during my internship at a tech company in my country. The internship allowed me to gain hands-on experience in software development and understand the workings of the tech industry. I worked on real projects alongside experienced professionals, which greatly enhanced my programming skills and introduced me to new technologies.
+                    </p>
+                    <a href="fichiers/Internship_Report.pdf" download="Internship_Report.pdf" class="download-button">Download the Internship Report (pdf)</a>
+                </div>
+
+                <div class="highlight-item">
+                    <img src="images/hackathon.png" alt="Hackathon Group picture">
+                    <p data-en="During the From Scratch Hackathon, our team designed Orange Med Planner, an application that simplifies the management of medical appointments for Orange employees. This innovative project allowed us to win first place thanks to our efficient and intuitive solution. Following our victory, we had the honor of being interviewed by the newspaper Le Pays." data-fr="Lors du Hackathon From Scratch, notre équipe a conçu Orange Med Planner, une application simplifiant la gestion des rendez-vous médicaux pour les employés d'Orange. Ce projet innovant nous a permis de remporter la première place grâce à notre solution efficace et intuitive. Suite à notre victoire, nous avons eu l'honneur d’être interviewés par le journal 'Le Pays' ." data-current-lang="en">
+                        During the From Scratch Hackathon, our team designed Orange Med Planner, an application that simplifies the management of medical appointments for Orange employees. This innovative project allowed us to win first place thanks to our efficient and intuitive solution. Following our victory, we had the honor of being interviewed by the newspaper Le Pays.
+                    </p>
+                    <a href="fichiers/Hackathon article.pdf" download="Journal_Article" class="download-button">Download the Journal Article (pdf)</a>
+                </div>
+
+
+            </div>
+        </div> 
+    </section>
+
+
+
+    <section id="skills" class="appear">
+        <div class="section-title">
+            <div class="title-container">
+                <h2 data-en="Technical Competencies" data-fr="Compétences Techniques" data-current-lang="en">Technical Competencies</h2>
+                <div class="underline"></div>
+            </div>
+            <h3 id="skills-subtitle"  data-en=" I may not be an expert in all of these areas, However, I am confident in my ability to use them effectively" data-fr="Je ne suis peut-être pas un expert dans tous ces domaines, Mais j'ai confiance en ma capacité à les utiliser efficacement." data-current-lang="en">
+                I may not be an expert in all of these areas, However, I am confident in my ability to use them effectively <br>
+                  
+            </h3>
+        </div>
+
+        <!-- Conteneur principal pour les compétences et l'image centrale -->
+        <div class="skills-main-container hidden">
+            <!-- Carte 1 (en haut à gauche) -->
+            <div class="skill-card top-left">
+                <span class="material-symbols-outlined skill-icon">
+                    computer
+                </span>
+                <div class="skill-content1">
+                    <h3 data-lang-en="Computer Skills" data-lang-fr="Compétences Informatiques">Computer Skills</h3>
+                    <p data-lang-en="Presentation softwares (PowerPoint, Canva, Google Docs), Adobe Softwares (Adobe XD, Adobe InDesign, Adobe Photoshop), Programming Skills (HTML, CSS, JavaScript, Scratch) using VS Code, AI Prompts, Sweet Home 3D"
+                       data-lang-fr="Logiciels de présentation (PowerPoint, Canva, Google Docs), Logiciels Adobe (Adobe XD, Adobe InDesign, Adobe Photoshop), Compétences en programmation (HTML, CSS, JavaScript, Scratch) avec VS Code, Prompts IA, Sweet Home 3D">
+                        Presentation softwares (PowerPoint, Canva, Google Docs), Adobe Softwares (Adobe XD, Adobe InDesign, Adobe Photoshop), Programming Skills (HTML, CSS, JavaScript, Scratch) using VS Code, AI Prompts, Sweet Home 3D
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Icône de flèche vers Carte 1 -->
+            <span class="material-symbols-outlined arrow-icon arrow-top-left">
+                switch_access_shortcut
+            </span>
+    
+            <!-- Carte 2 (en bas à gauche) -->
+            <div class="skill-card bottom-left">
+                <span class="material-symbols-outlined skill-icon">
+                    leaderboard
+                </span>
+                <div class="skill-content">
+                    <h3 data-lang-en="Project Management" data-lang-fr="Gestion de Projet">Project Management</h3>
+                    <p data-lang-en="Presentation Skills, Project Management, Great Sense of Humor, Team Leadership/Management, PowerPoint, Word, Canva, Google Docs, Team Communication"
+                       data-lang-fr="Compétences en présentation, Gestion de projet, Bon sens de l'humour, Leadership/Management d'équipe, PowerPoint, Word, Canva, Google Docs, Communication d'équipe">
+                        Presentation Skills, Project Management, Great Sense of Humor, Team Leadership/Management, PowerPoint, Word, Canva, Google Docs, Team Communication
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Icône de flèche vers Carte 2 -->
+            <span class="material-symbols-outlined arrow-icon arrow-bottom-left">
+                switch_access_shortcut
+            </span>
+    
+            <!-- Image centrale -->
+            <div class="skills-center-image">
+                <img src="images/technical.png" alt="Center Skill">
+            </div>
+    
+            <!-- Carte 3 (en haut à droite) -->
+            <div class="skill-card top-right">
+                <span class="material-symbols-outlined skill-icon">
+                    school
+                </span>
+                <div class="skill-content">
+                    <h3 data-lang-en="Relevant Courses" data-lang-fr="Cours Importants">Relevant Courses</h3>
+                    <p data-lang-en="Harvard online programming course (CS50: Introduction to Computer Science), Open Classroom courses (HTML5, CSS3, JavaScript), 4 years of technology courses at school (home automation, network, programming)"
+                       data-lang-fr="Cours de programmation en ligne de Harvard (CS50 : Introduction à l'informatique), Cours OpenClassrooms (HTML5, CSS3, JavaScript), 4 ans de cours de technologie à l'école (domotique, réseau, programmation)">
+                        Harvard online programming course (CS50: Introduction to Computer Science), Open Classroom courses (HTML5, CSS3, JavaScript), 4 years of technology courses at school (home automation, network, programming)
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Icône de flèche vers Carte 3 -->
+            <span class="material-symbols-outlined arrow-icon arrow-top-right">
+                switch_access_shortcut
+            </span>
+    
+            <!-- Carte 4 (en bas à droite) -->
+            <div class="skill-card bottom-right">
+                <span class="material-symbols-outlined skill-icon">
+                    interests
+                </span>
+                <div class="skill-content">
+                    <h3 data-lang-en="Interests" data-lang-fr="Intérêts">Interests</h3>
+                    <p data-lang-en="Artificial Intelligence, Generative AI, Web Design, Cybersecurity, Aeronautical Engineering, Aerospace"
+                       data-lang-fr="Intelligence Artificielle, IA Générative, Web Design, Cybersécurité, Génie Aéronautique, Aérospatial">
+                        Artificial Intelligence, Generative AI, Web Design, Cybersecurity, Aeronautical Engineering, Aerospace
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Icône de flèche vers Carte 4 -->
+            <span class="material-symbols-outlined arrow-icon arrow-bottom-right">
+                switch_access_shortcut
+            </span>
+        </div>
+    </section>
+
+
+  
+
+    <section id="projects" class="appear">
+        <div class="section-title">
+            <div class="title-container">
+                <h2 data-en="My Latest Projects" data-fr="Mes Projets Récents" data-current-lang="en">My Latest Projects</h2>
+                <div class="underline"></div>
+                <h3 data-en="Here are some of the projects I've recently worked on" data-fr="Voici quelques-uns des projets sur lesquels j'ai récemment travaillé" data-current-lang="en">
+                    Here are some of the projects I've recently worked on
+                </h3>
+            </div>
+        </div>
+        
+        <div class="projects-container">
+            
+            <div class="project-item">
+                <div class="carousel">
+                    <button class="carousel-control prev" onclick="prevSlide()">&laquo;</button>
+                    <!-- Images du carrousel -->
+                    <img src="images/magazine-cover1.png" alt="Magazine Page 1" class="magazine-image active">
+                    <img src="images/magazine-cover2.png" alt="Magazine Page 2" class="magazine-image">
+                    <img src="images/magazine-cover3.png" alt="Magazine Page 3" class="magazine-image">
+                    <img src="images/magazine-cover4.png" alt="Magazine Page 4" class="magazine-image">
+                    <img src="images/magazine-cover5.png" alt="Magazine Page 5" class="magazine-image">
+                    <img src="images/magazine-cover6.png" alt="Magazine Page 6" class="magazine-image">
+                    <img src="images/magazine-cover7.png" alt="Magazine Page 7" class="magazine-image">
+                    <button class="carousel-control next" onclick="nextSlide()">&raquo;</button>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+                <div class="project-text">
+                    <h3 data-en="School Magazine" data-fr="Magazine Scolaire" data-current-lang="en">School Magazine</h3>
+                    <p data-en="I am responsible for the layout and design of our school's magazine. My role involves organizing content, selecting typography and colors, and ensuring a cohesive presentation. This position lets me blend creativity with technical skills to produce a polished final product." data-fr="Je suis responsable de la mise en page et de la conception du magazine de notre école. Mon rôle consiste à organiser le contenu, à sélectionner la typographie et les couleurs et à assurer une présentation cohérente. Ce poste me permet d'allier créativité et compétences techniques pour produire un produit final soigné." data-current-lang="en">
+                        I am responsible for the layout and design of our school's magazine. My role involves organizing content, selecting typography and colors, and ensuring a cohesive presentation.
+                    </p>
+                    <!-- Bouton de téléchargement spécifique au projet -->
+                    <a href="fichiers/School magazine.zip" download="School_Magazines.zip" class="download-button" data-en="Download the Three first editions (zip)" data-fr="Télécharger les trois premières éditions (zip)" data-current-lang="en">
+                        Download the Three first editions (zip)
+                    </a>
+                </div>
+            </div>
+            
+           
+            <div class="project-item hidden">
+                <div class="carousel">
+                    <!-- Image du site web -->
+                    <img src="images/homepage.png" alt="Website Home Page" class="website-image active">
+                    <!-- Ajouter des boutons de contrôle si nécessaire -->
+                </div>
+                <div class="carousel-indicators">
+                    <span class="dot active" onclick="currentSlidePortfolio(0)"></span>
+                    <!-- Ajouter des dots si plus d'une image -->
+                </div>
+                <div class="project-text">
+                    <h3 data-en="Portfolio Website" data-fr="Site Web de Portfolio" data-current-lang="en">Portfolio Website</h3>
+                    <p data-en="I am in the process of making a portfolio website to highlight what I do and have achieved. I design the layout, structure content, and select typography and a color palette to create an attractive look throughout the presentation. I always learn from this project how to cooperate with my technical skills and creativity in order to have a refined professional website." data-fr="Je suis en train de créer un site Web de portfolio pour mettre en valeur ce que je fais et ce que j'ai accompli. Je conçois la mise en page, structure le contenu et sélectionne la typographie et une palette de couleurs pour créer un look attrayant tout au long de la présentation. J'apprends toujours de ce projet comment coopérer avec mes compétences techniques et ma créativité afin d'avoir un site Web professionnel raffiné." data-current-lang="en">
+                        I am in the process of making a portfolio website to highlight what I do and have achieved. I design the layout, structure content, and select typography and a color palette to create an attractive look throughout the presentation. I always learn from this project how to cooperate with my technical skills and creativity in order to have a refined professional website.
+                    </p>
+                    <!-- Bouton de téléchargement spécifique au projet (si nécessaire) -->
+                    <a href="fichiers/Rayann's Sagnon Project.pdf" download="Design_Mockup.pdf" class="download-button" data-en="Download the design mockup of the website (pdf)" data-fr="Télécharger la maquette du site (pdf)" data-current-lang="en">
+                        Download the design mockup of the website (pdf)
+                    </a>
+                </div>
+            </div>
+            
+            
+            
+            <div class="project-item">
+                <div class="carousel">
+                    
+                    <!-- Images du carrousel -->
+                    <img src="images/livret-page1.jpeg" alt="Booklet Page 1" class="magazine-image active">
+                    
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="dot active" onclick="currentSlidePortfolio(0)"></span>
+                    <!-- Ajouter des dots si plus d'une image -->
+                </div>
+                
+                <div class="project-text">
+                    <h3 data-en="Equality Booklet" data-fr="Livret sur l'Égalité" data-current-lang="en">Equality Booklet</h3>
+                    <p data-en="As part of my EMC class, I created a booklet focused on promoting equality between boys and girls in school. This project involved researching the challenges that both genders face and proposing actionable solutions to address these issues. The experience deepened my understanding of gender equality and encouraged me to think critically about how educational environments can be more inclusive and supportive for all students." data-fr="Dans le cadre de mon cours EMC, j’ai créé un livret axé sur la promotion de l’égalité entre les garçons et les filles à l’école. Ce projet consistait à faire des recherches sur les défis auxquels les deux sexes sont confrontés et à proposer des solutions concrètes pour y remédier. Cette expérience a approfondi ma compréhension de l’égalité des sexes et m’a encouragée à réfléchir de manière critique à la manière dont les environnements éducatifs peuvent être plus inclusifs et plus favorables à tous les élèves." data-current-lang="en">
+                        As part of my EMC class, I created a booklet focused on promoting equality between boys and girls in school. This project involved researching the challenges that both genders face and proposing actionable solutions to address these issues. The experience deepened my understanding of gender equality and encouraged me to think critically about how educational environments can be more inclusive and supportive for all students.
+                    </p>
+                    <a href="fichiers/LIVRET EMC VF.pdf" download="Equality Booklet.pdf" class="download-button">Download Equality Booklet (pdf)</a>
+                </div>
+            </div>
+
+        
+            
+            
+
+            <div class="project-item1">
+                <div class="carousel1">
+                    
+                    
+                    <img src="images/Orange.jpeg" alt="Booklet Page 1" class="magazine-image active">
+                    
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="dot active" onclick="currentSlidePortfolio(0)"></span>
+                    
+                </div>
+                
+                <div class="project-text1">
+                    <h3 data-en="Equality Booklet" data-fr="Livret sur l'Égalité" data-current-lang="en">Equality Booklet</h3>
+                    <p data-en="During the From Scratch Hackathon, our team designed Orange Med Planner, an innovative application made in no-code with Adalo. The application allows Orange employees to plan and manage their medical appointments with ease. Among its key features: A user-friendly interface to make appointments in a few clicks, An integrated calendar for a better visualization of availability and Automatic notifications to remind you of upcoming consultations.
+                    Thanks to its intuitive design and usefulness, Orange Med Planner won first place in the competition." data-fr="Lors du Hackathon From Scratch, notre équipe a conçu Orange Med Planner, une application innovante réaliséet en no-code avec Adalo. L'application permet aux employés d'Orange de planifier et gérer leurs rendez-vous médicaux avec simplicité. Parmi ses fonctionnalités clés : Une interface conviviale pour prendre des rendez-vous en quelques clics, Un calendrier intégré pour une meilleure visualisation des disponibilités et Des notifications automatiques pour rappeler les consultations à venir.
+                    Grâce à sa conception intuitive et à son utilité, Orange Med Planner a remporté la première place de la compétition." data-current-lang="en">
+                    During the From Scratch Hackathon, our team designed Orange Med Planner, an innovative application made in no-code with "Adalo". The application allows Orange employees to plan and manage their medical appointments with ease. Among its key features: A user-friendly interface to make appointments in a few clicks, An integrated calendar for a better visualization of availability and Automatic notifications to remind you of upcoming consultations.
+                    Thanks to its intuitive design and usefulness, Orange Med Planner won first place in the competition.
+                    </p>
+                    <a href="fichiers/Orange Med Planner Document.pdf" download="Orange Med Planner Document.pdf" class="download-button">Download The App Document (pdf)</a>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+    
+
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
