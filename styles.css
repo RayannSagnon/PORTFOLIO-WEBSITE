@@ -5,6 +5,7 @@ body {
     background-color: #070000;
     color: #FFFFFF;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 a {
@@ -148,6 +149,68 @@ nav ul li a.active::after,
 nav ul li a:hover::after {
     width: 100%;
 }
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger-menu .line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(7, 0, 0, 0.9);
+        width: 200px;
+        z-index: 1000;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+    .nav-menu ul li a {
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        color: #fff;
+    }
+}
+
 
 /* Underline for section titles */
 .section-title {
@@ -408,11 +471,49 @@ nav ul li a:hover::after {
 
 .moments-container {
     display: flex;
-    align-items: flex-start; /* Aligne les items en haut */
-    justify-content: center; /* Espace les items uniformément */
-    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
-    margin: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
 }
+
+.highlight-item {
+    flex: 1 1 30%; /* Taille normale sur les grands écrans */
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.highlight-item img {
+    width: 100%;
+    height: auto; /* Assure que l'image conserve ses proportions */
+    object-fit: cover; /* S'assure que l'image s'adapte bien au conteneur sans être coupée */
+    max-height: 230px; /* Ajuste cette valeur en fonction de la taille souhaitée */
+}
+
+@media (max-width: 768px) {
+    .moments-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .highlight-item {
+        flex: 1 1 100%; /* Les moments occupent toute la largeur disponible sur mobile */
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .highlight-item img {
+        max-width: 100%;
+        height: auto; /* S'assure que l'image n'est pas coupée */
+        object-fit: cover; /* Garantit que l'image est entièrement visible sans déformation */ /* Permet à l'image de s'étendre à sa hauteur naturelle */
+    }
+}
+
+
+
+
+
 
 
 
@@ -475,18 +576,6 @@ nav ul li a:hover::after {
 
 
 @media (max-width: 768px) {
-    #highlights {
-        padding: 150px 10px 50px 10px; /* Ajustez le padding-top pour compenser la navbar */
-    }
-    .moments-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .highlight-item {
-        flex: 1 1 100%; /* Les items occupent toute la largeur */
-        max-width: none;
-    }
 
     .arrow-icon {
         display: none;
@@ -935,6 +1024,105 @@ nav ul li a:hover::after {
     background-color: #A51E1E;
 }
 
+
+.project-item1 {
+    background-color: #482A2A;
+    border-radius: 45px;
+    padding: 13px; /* Ajusté pour correspondre aux autres projets */
+    flex: 1 1 300px; /* Définit une largeur similaire aux autres */
+    max-width: 340px; /* Limite la largeur maximale */
+    height: auto; /* Permet d'adapter la hauteur automatiquement */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center; /* Centrer le texte */
+}
+
+.carousel1 img {
+    width: 100%;
+    max-height: 350px; /* Limite la hauteur pour garder une taille cohérente */
+    object-fit: cover; /* Maintient un bon rapport hauteur/largeur */
+    border-radius: 45px;
+    margin-bottom: 10px; /* Ajoute un espacement sous l'image */
+}
+
+.project-text1 {
+    font-size: 0.9em; /* Taille de police adaptée aux autres projets */
+    margin-top: 10px;
+    line-height: 1.4em; /* Améliore la lisibilité */
+    text-align: left;
+}
+
+.download-button {
+    margin-top: 15px;
+    padding: 10px 15px; /* Ajuste la taille du bouton */
+    font-size: 0.85em; /* Uniformise avec les autres boutons */
+    border-radius: 30px;
+}
+
+.project-item {
+    background-color: #482A2A;
+    border-radius: 45px;
+    padding: 12px;
+    flex: 1 1 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    transform: scale(0.8);
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 45px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel img.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(210, 50, 50, 0.7);
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+
+
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 45px;
+    transition: opacity 0.5s ease-in-out;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .projects-container {
@@ -972,41 +1160,6 @@ nav ul li a:hover::after {
     }
 }
 
-/* Styles pour le bouton Retour en Haut */
-.back-to-top {
-    position: fixed;
-    bottom: 80px; /* Ajustez la position selon vos besoins */
-    right: 20px;
-    background-color: #D23232; /* Couleur de fond rouge */
-    color: #FFFFFF; /* Couleur de l'icône */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 24px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    visibility: visible;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1001; /* Assurez-vous que le bouton est au-dessus des autres éléments */
-}
-
-.back-to-top:hover {
-    background-color: #A51E1E; /* Couleur de fond au survol */
-}
-
-.back-to-top .material-icons {
-    font-size: 28px; /* Taille de l'icône */
-}
-
-/* Afficher le bouton lorsqu'on défile de 300px vers le bas */
-.show-back-to-top {
-    opacity: 1;
-    visibility: visible;
-}
 
 
 
@@ -1180,6 +1333,91 @@ nav ul li a:hover::after {
         font-size: 16px;
     }
 }
+
+@media (max-width: 768px) {
+    .name-and-language {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .name-and-language h1 {
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+
+    .language-btn {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .arrow-icon {
+        display: none;
+    }
+}
+
+.skill-card {
+    word-wrap: break-word;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .skill-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skill-card p {
+        font-size: 1em;
+    }
+}
+
+/* Styles pour l'animation d'apparition en glissant vers le haut */
+/* Les éléments apparaissent hors de l'écran et cachés au départ */
+.appear {
+    opacity: 0;
+    transform: translateY(50px); /* Glissement initial vers le bas */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Lorsque la classe 'show' est ajoutée, les éléments apparaissent */
+.appear.show {
+    opacity: 1;
+    transform: translateY(0); /* Les éléments se replacent à leur position d'origine */
+}
+
+
+/* Masquer les flèches sur les petits écrans, comme les téléphones mobiles */
+@media (max-width: 600px) {
+    .arrow-icon {
+        display: none;
+    }
+}
+
+/* Cacher les flèches en dessous de 768px */
+@media (max-width: 768px) {
+    .arrow-icon {
+        display: none;
+    }
+}
+
+/* Cacher les flèches en dessous de 1024px */
+@media (max-width: 1024px) {
+    .arrow-icon {
+        display: none;
+    }
+}
+
+/* Afficher les flèches sur les grands écrans si nécessaire */
+@media (max-width: 768px) {
+    .arrow-icon {
+        display: none !important; /* Forcer la disparition des flèches sur les petits écrans */
+    }
+}
+
 
 
 
