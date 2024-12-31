@@ -25,7 +25,12 @@
                 <h1><span class="red">Rayann</span> <span class="white">Sagnon</span></h1>
                 <button class="language-btn" onclick="switchLanguage()">EN</button>
             </div>
-            <nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="#home" class="nav-link" data-en="Home" data-fr="Accueil" data-current-lang="en">Home</a></li>
                     <li><a href="#about" class="nav-link" data-en="About" data-fr="À propos" data-current-lang="en">About</a></li>
@@ -38,7 +43,7 @@
     </header>
 
     <!-- Section Home -->
-    <section id="home">
+    <section id="home" class="appear">
         <div class="intro hidden">
             <!-- Image à gauche -->
             <div class="profile-container">
@@ -75,7 +80,7 @@
     </section>
 
     <!-- Section About -->
-    <section id="about">
+    <section id="about" class="appear">
         <!-- Première sous-section -->
         <div class="about-content hidden">
             <div class="about-picture">
@@ -115,7 +120,7 @@
     
     <!-- Section Highlights -->
 
-    <section id="highlights">
+    <section id="highlights" class="appear">
         <div class="section-title">
             <div class="title-container">
                 <h2 data-en="Key moments" data-fr="Moments clés" data-current-lang="en">Key moments</h2>
@@ -171,24 +176,24 @@
 
         
 
-        <!-- Deuxième ligne de moments -->
+       
         <div class="moments hidden">
             <div class="moments-container">
-                <!-- Highlight Item 4 -->
+                
                 <div class="highlight-item">
                     <img src="images/sauve2.png" alt="First Aid Training">
                     <p data-en="As a student, I undertook a course in first aid and acquired extensive skills on how to respond to emergencies. This training has equipped me with the knowledge to act promptly and efficiently in critical situations, ensuring the safety and well-being of those around me. It has also heightened my sense of responsibility and preparedness in everyday life." data-fr="En tant qu'étudiant, j'ai suivi une formation aux premiers secours et acquis des compétences approfondies sur la manière de réagir en cas d'urgence. Cette formation m'a permis d'acquérir les connaissances nécessaires pour agir rapidement et efficacement dans des situations critiques, assurant la sécurité et le bien-être de ceux qui m'entourent. Elle a également renforcé mon sens des responsabilités et ma préparation dans la vie quotidienne." data-current-lang="en">
                         As a student, I undertook a course in first aid and acquired extensive skills on how to respond to emergencies. This training has equipped me with the knowledge to act promptly and efficiently in critical situations, ensuring the safety and well-being of those around me. It has also heightened my sense of responsibility and preparedness in everyday life.
                     </p>
-                    <a href="fichiers/First_Aid_Certificate.pdf" download="First_Aid_Certificate.pdf" class="download-button">Download the First Aid Certificate (pdf)</a>
+                    <a href="fichiers/Premiers Secours.pdf" download="First_Aid_Certificate.pdf" class="download-button">Download the First Aid Certificate (pdf)</a>
                 </div>
 
-                <!-- Icône de flèche (inversée verticalement) -->
+             
                 <span class="material-symbols-outlined arrow-icon vertical">
                     switch_access_shortcut
                 </span>
 
-                <!-- Highlight Item 5 -->
+               
                 <div class="highlight-item">
                     <img src="images/reunion2.png" alt="Public Speaking Event">
                     <p data-en="Here is me at our school's public speaking event, attended by students and their parents. I hosted the entire event, managing the flow of the program and introducing speakers. This experience significantly enhanced my public speaking abilities and taught me how to engage an audience effectively. It was a rewarding opportunity to represent my school and contribute to a memorable event." data-fr="Me voici lors de l'événement d'expression orale de notre école, auquel ont assisté des élèves et leurs parents. J'ai animé l'intégralité de l'événement, gérant le déroulement du programme et présentant les intervenants. Cette expérience a considérablement amélioré mes compétences en prise de parole en public et m'a appris à capter efficacement l'attention d'un auditoire. Ce fut une occasion enrichissante de représenter mon école et de contribuer à un événement mémorable." data-current-lang="en">
@@ -196,12 +201,12 @@
                     </p>
                 </div>
 
-                <!-- Icône de flèche (normale) -->
+               
                 <span class="material-symbols-outlined arrow-icon">
                     switch_access_shortcut
                 </span>
 
-                <!-- Highlight Item 6 -->
+               
                 <div class="highlight-item">
                     <img src="images/report2.png" alt="Internship Report">
                     <p data-en="This screenshot is from a programming course I took during my internship at a tech company in my country. The internship allowed me to gain hands-on experience in software development and understand the workings of the tech industry. I worked on real projects alongside experienced professionals, which greatly enhanced my programming skills and introduced me to new technologies." data-fr="Cette capture d'écran provient d'un cours de programmation que j'ai suivi lors de mon stage dans une entreprise technologique de mon pays. Ce stage m'a permis d'acquérir une expérience pratique en développement logiciel et de comprendre le fonctionnement de l'industrie technologique. J'ai travaillé sur de vrais projets aux côtés de professionnels expérimentés, ce qui a grandement amélioré mes compétences en programmation et m'a fait découvrir de nouvelles technologies." data-current-lang="en">
@@ -209,16 +214,23 @@
                     </p>
                     <a href="fichiers/Internship_Report.pdf" download="Internship_Report.pdf" class="download-button">Download the Internship Report (pdf)</a>
                 </div>
+
+                <div class="highlight-item">
+                    <img src="images/hackathon.png" alt="Hackathon Group picture">
+                    <p data-en="During the From Scratch Hackathon, our team designed Orange Med Planner, an application that simplifies the management of medical appointments for Orange employees. This innovative project allowed us to win first place thanks to our efficient and intuitive solution. Following our victory, we had the honor of being interviewed by the newspaper Le Pays." data-fr="Lors du Hackathon From Scratch, notre équipe a conçu Orange Med Planner, une application simplifiant la gestion des rendez-vous médicaux pour les employés d'Orange. Ce projet innovant nous a permis de remporter la première place grâce à notre solution efficace et intuitive. Suite à notre victoire, nous avons eu l'honneur d’être interviewés par le journal 'Le Pays' ." data-current-lang="en">
+                        During the From Scratch Hackathon, our team designed Orange Med Planner, an application that simplifies the management of medical appointments for Orange employees. This innovative project allowed us to win first place thanks to our efficient and intuitive solution. Following our victory, we had the honor of being interviewed by the newspaper Le Pays.
+                    </p>
+                    <a href="fichiers/Hackathon article.pdf" download="Journal_Article" class="download-button">Download the Journal Article (pdf)</a>
+                </div>
+
+
             </div>
         </div> 
     </section>
 
 
-    
 
-    <!-- Section Skills -->
-
-    <section id="skills">
+    <section id="skills" class="appear">
         <div class="section-title">
             <div class="title-container">
                 <h2 data-en="Technical Competencies" data-fr="Compétences Techniques" data-current-lang="en">Technical Competencies</h2>
@@ -316,12 +328,9 @@
     </section>
 
 
-    <!-- Section Projects -->
+  
 
-
-
-
-    <section id="projects">
+    <section id="projects" class="appear">
         <div class="section-title">
             <div class="title-container">
                 <h2 data-en="My Latest Projects" data-fr="Mes Projets Récents" data-current-lang="en">My Latest Projects</h2>
@@ -333,7 +342,7 @@
         </div>
         
         <div class="projects-container">
-            <!-- Project 1: School Magazine -->
+            
             <div class="project-item">
                 <div class="carousel">
                     <button class="carousel-control prev" onclick="prevSlide()">&laquo;</button>
@@ -368,7 +377,7 @@
                 </div>
             </div>
             
-            <!-- Project 2: Portfolio Website -->
+           
             <div class="project-item hidden">
                 <div class="carousel">
                     <!-- Image du site web -->
@@ -385,13 +394,13 @@
                         I am in the process of making a portfolio website to highlight what I do and have achieved. I design the layout, structure content, and select typography and a color palette to create an attractive look throughout the presentation. I always learn from this project how to cooperate with my technical skills and creativity in order to have a refined professional website.
                     </p>
                     <!-- Bouton de téléchargement spécifique au projet (si nécessaire) -->
-                    <a href="fichiers/Design Mockup.pdf" download="Design_Mockup.pdf" class="download-button" data-en="Download the design mockup of the website (pdf)" data-fr="Télécharger la maquette du site (pdf)" data-current-lang="en">
+                    <a href="fichiers/Rayann's Sagnon Project.pdf" download="Design_Mockup.pdf" class="download-button" data-en="Download the design mockup of the website (pdf)" data-fr="Télécharger la maquette du site (pdf)" data-current-lang="en">
                         Download the design mockup of the website (pdf)
                     </a>
                 </div>
             </div>
             
-            <!-- Project 3: Equality Booklet -->
+            
             
             <div class="project-item">
                 <div class="carousel">
@@ -411,21 +420,49 @@
                     <p data-en="As part of my EMC class, I created a booklet focused on promoting equality between boys and girls in school. This project involved researching the challenges that both genders face and proposing actionable solutions to address these issues. The experience deepened my understanding of gender equality and encouraged me to think critically about how educational environments can be more inclusive and supportive for all students." data-fr="Dans le cadre de mon cours EMC, j’ai créé un livret axé sur la promotion de l’égalité entre les garçons et les filles à l’école. Ce projet consistait à faire des recherches sur les défis auxquels les deux sexes sont confrontés et à proposer des solutions concrètes pour y remédier. Cette expérience a approfondi ma compréhension de l’égalité des sexes et m’a encouragée à réfléchir de manière critique à la manière dont les environnements éducatifs peuvent être plus inclusifs et plus favorables à tous les élèves." data-current-lang="en">
                         As part of my EMC class, I created a booklet focused on promoting equality between boys and girls in school. This project involved researching the challenges that both genders face and proposing actionable solutions to address these issues. The experience deepened my understanding of gender equality and encouraged me to think critically about how educational environments can be more inclusive and supportive for all students.
                     </p>
-                    <a href="fichiers/Internship_Report.pdf" download="Internship_Report.pdf" class="download-button">Download the Internship Report (pdf)</a>
+                    <a href="fichiers/LIVRET EMC VF.pdf" download="Equality Booklet.pdf" class="download-button">Download Equality Booklet (pdf)</a>
                 </div>
             </div>
+
+        
+            
+            
+
+            <div class="project-item1">
+                <div class="carousel1">
+                    
+                    
+                    <img src="images/Orange.jpeg" alt="Booklet Page 1" class="magazine-image active">
+                    
+                </div>
+
+                <div class="carousel-indicators">
+                    <span class="dot active" onclick="currentSlidePortfolio(0)"></span>
+                    
+                </div>
+                
+                <div class="project-text1">
+                    <h3 data-en="Equality Booklet" data-fr="Livret sur l'Égalité" data-current-lang="en">Equality Booklet</h3>
+                    <p data-en="During the From Scratch Hackathon, our team designed Orange Med Planner, an innovative application made in no-code with Adalo. The application allows Orange employees to plan and manage their medical appointments with ease. Among its key features: A user-friendly interface to make appointments in a few clicks, An integrated calendar for a better visualization of availability and Automatic notifications to remind you of upcoming consultations.
+                    Thanks to its intuitive design and usefulness, Orange Med Planner won first place in the competition." data-fr="Lors du Hackathon From Scratch, notre équipe a conçu Orange Med Planner, une application innovante réaliséet en no-code avec Adalo. L'application permet aux employés d'Orange de planifier et gérer leurs rendez-vous médicaux avec simplicité. Parmi ses fonctionnalités clés : Une interface conviviale pour prendre des rendez-vous en quelques clics, Un calendrier intégré pour une meilleure visualisation des disponibilités et Des notifications automatiques pour rappeler les consultations à venir.
+                    Grâce à sa conception intuitive et à son utilité, Orange Med Planner a remporté la première place de la compétition." data-current-lang="en">
+                    During the From Scratch Hackathon, our team designed Orange Med Planner, an innovative application made in no-code with "Adalo". The application allows Orange employees to plan and manage their medical appointments with ease. Among its key features: A user-friendly interface to make appointments in a few clicks, An integrated calendar for a better visualization of availability and Automatic notifications to remind you of upcoming consultations.
+                    Thanks to its intuitive design and usefulness, Orange Med Planner won first place in the competition.
+                    </p>
+                    <a href="fichiers/Orange Med Planner Document.pdf" download="Orange Med Planner Document.pdf" class="download-button">Download The App Document (pdf)</a>
+                </div>
+            </div>
+
+            
 
         </div>
     </section>
 
-    <!-- Bouton Retour en Haut -->
-    <a href="#" class="back-to-top" id="backToTopBtn">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    
 
 
 
-    <!-- Lien vers le fichier JavaScript -->
+    
     <script src="script.js"></script>
 </body>
 </html>
